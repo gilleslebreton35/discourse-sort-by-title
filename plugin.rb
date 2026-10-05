@@ -1,7 +1,7 @@
 # name: discourse-sort-by-title
 # about: Permet le tri natif des sujets par titre (A-Z) et l'applique automatiquement
 # version: 0.4
-# authors: Auto-hébergé
+# authors: gilles
 
 after_initialize do
   # 1. On autorise le serveur à trier par titre (Correction : on utilise juste "title")
@@ -10,7 +10,7 @@ after_initialize do
   # 2. Application automatique en base de données
   begin
     # Ajoute les slugs de tes catégories ici (ex: "presentation-jeux")
-    categories_a_trier = ["presentation-jeux"]
+    categories_a_trier = ["presentation-jeux","presentation-jeux-a-campagne","jeux-familles"]
     
     Category.where(slug: categories_a_trier).each do |cat|
       if cat.sort_order != "title" || cat.sort_ascending != true
