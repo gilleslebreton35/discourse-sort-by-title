@@ -1,0 +1,5 @@
+plugins:
+  alphabetical_sort_categories:
+    default: ""
+    type: category_list
+    refresh: false
