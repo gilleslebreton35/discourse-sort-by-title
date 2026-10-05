@@ -1,5 +1,7 @@
 plugins:
+  alphabetical_sort_enabled:
+    default: true
+    type: bool
   alphabetical_sort_categories:
     default: ""
     type: category_list
-    refresh: false
