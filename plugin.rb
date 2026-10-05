@@ -1,9 +1,9 @@
 # name: discourse-sort-by-title
-# about: Permet le tri natif des sujets par titre (A-Z)
-# version: 0.1
+# about: Permet le tri natif des sujets par titre (A-Z) et l'ajoute au menu admin
+# version: 0.2
 # authors: Auto-hébergé
 
 after_initialize do
-  # Ajoute la colonne 'title' aux champs de tri autorisés par le serveur
+  # Débloque le tri par titre dans la requête SQL
   TopicQuery::SORTABLE_MAPPING["title"] = "topics.title"
 end
